@@ -1,0 +1,10 @@
+name: myexample
+on: push 
+jobs: 
+    myjob1:
+        runs-on: ubuntu-latest
+        steps:
+        - name: welcome vani 
+          run: echo "vani ur welcomed by universe"
+        - name: readfile
+          run: cat README.md 
