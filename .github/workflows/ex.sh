@@ -1,2 +1,2 @@
 sudo apt install tree -y
-ls 
+echo " tree is installed"
