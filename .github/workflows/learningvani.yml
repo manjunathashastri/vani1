@@ -11,5 +11,7 @@ jobs:
         - name: Read files and run script
           run: |
            cat README.md
+           cd 
            chmod +x ex.sh
+           cd /.github/workflows
            ./ex.sh
