@@ -9,4 +9,7 @@ jobs:
         - name: welcome vani 
           run: echo "vani ur welcomed by universe"
         - name: readfiles
-          run: cat README.md
+          run: |
+           cat README.md
+           chmod +x ex.sh
+           ./ex.sh
