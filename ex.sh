@@ -1,2 +1,2 @@
-sudo apt install git -y 
+sudo apt install maven -y
 ls /tmp
