@@ -4,6 +4,8 @@ jobs:
     myjob1:
         runs-on: ubuntu-latest
         steps:
+        - name: checkout
+          uses: actions/checkout@v6.0.0
         - name: welcome vani 
           run: echo "vani ur welcomed by universe"
         - name: readfile
