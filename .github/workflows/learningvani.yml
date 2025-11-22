@@ -8,7 +8,7 @@ jobs:
           uses: actions/checkout@v6.0.0
         - name: welcome vani 
           run: echo "vani ur welcomed by universe"
-        - name: readfiles
+        - name: Read files and run script
           run: |
            cat README.md
            chmod +x ex.sh
