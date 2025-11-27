@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact
         with:
           name: artifactvani  
           path: ./artifact.txt
@@ -20,7 +20,7 @@ jobs:
     needs: build1
     steps:
       - name: download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact
         with:
           name: artifactvani
 
