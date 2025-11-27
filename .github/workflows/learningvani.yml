@@ -1,15 +1,27 @@
-name: myexample
-on: push 
-jobs: 
-    myjob1:
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout
-          uses: actions/checkout@v6.0.0
-        - name: welcome vani 
-          run: echo "vani ur welcomed by universe"
-        - name: Read files and run script
-          run: |
-           cat README.md
-           chmod +x ex.sh
-           sh ex.sh
+name: workflow1
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  build1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifactvani  
+          path: ./artifact.txt
+  build2: 
+    runs-on: ubuntu-latest
+    needs: build1
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: artifactvani
+
+
